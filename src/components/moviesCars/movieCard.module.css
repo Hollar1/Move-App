@@ -1,0 +1,57 @@
+.sec_01 {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.img_div {
+  margin-top: 3px;
+  position: relative;
+}
+
+.img_div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.tile_div {
+  /* margin-top: 20px; */
+}
+.tile_div h4 {
+  font-family: inter;
+  font-weight: 550;
+}
+
+.icons_div {
+  position: absolute;
+  background-color: black;
+  height: 25px;
+  width: 25px;
+  border-radius: 12.5px;
+  color: white;
+  font-size: 14px;
+  right: 2%;
+  top: 2%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.release_date {
+  font-family: inter;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+  color: rgb(246, 165, 65);
+}
+.overview {
+  font-weight: 400;
+  font-size: 12px;
+  font-family: inter;
+  letter-spacing: 0.3px;
+  line-height: 17px;
+}
