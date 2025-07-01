@@ -18,9 +18,9 @@
 }
 .link_div {
   position: absolute;
-  width: 91%;
-  height: 30%;
-  top: 76%;
+  width:320px;
+  height:60px;
+  bottom:0%;
   left: 50%;
   translate: -50% -50%;
   background-color: rgba(0, 0, 0, 0.5);

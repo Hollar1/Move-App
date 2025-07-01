@@ -34,6 +34,8 @@ function Home() {
     }, 10000);
   }, []);
 
+
+
   return (
     <div className={homeStyles.parent_wrapper}>
       {showAd && <Adverts />}
