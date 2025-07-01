@@ -33,7 +33,7 @@ function MovieCards({
             Release Date: {release_date}
           </div>
         </section>
-        <hr />
+      
       </div>
     </div>
   );

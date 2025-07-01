@@ -3,6 +3,10 @@
   color: white;
 }
 
+.wrap article{
+  border-bottom:  solid rgb(147, 111, 111);
+}
+
 .wrapper {
   padding: 0px 15px;
 }
@@ -35,10 +39,17 @@
   color: white;
   background-color: rgb(104, 102, 102);
 }
-.search_input_div input::placeholder{
+.search_input_div input::placeholder {
   color: white;
   letter-spacing: 0.5px;
 }
-.liked_color{
+.liked_color {
   color: red;
+}
+
+@media (min-width: 750px) {
+  .wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

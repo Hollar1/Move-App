@@ -34,8 +34,6 @@ function Home() {
     }, 10000);
   }, []);
 
-
-
   return (
     <div className={homeStyles.parent_wrapper}>
       {showAd && <Adverts />}
@@ -53,25 +51,32 @@ function Home() {
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
-          {movies.map(
-            (movie, index) =>
-              movie.title.toLowerCase().startsWith(search.toLowerCase()) && (
-                <MovieCards
-                  key={index}
-                  title={movie.title}
-                  release_date={movie.release_date}
-                  onClick={() => handleLiked(movie.id)}
-                  liked_color={likedMovies.includes(movie.id) ? "red" : null}
-                  icon={
-                    likedMovies.includes(movie.id)
-                      ? faSolidHeart
-                      : faRegularHeart
-                  }
-                  image={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                  overview={movie.overview}
-                />
-              )
-          )}
+
+          <section className={homeStyles.wrap}>
+            {movies.map(
+              (movie, index) =>
+                movie.title.toLowerCase().startsWith(search.toLowerCase()) && (
+                  <article>
+                    <MovieCards
+                      key={index}
+                      title={movie.title}
+                      release_date={movie.release_date}
+                      onClick={() => handleLiked(movie.id)}
+                      liked_color={
+                        likedMovies.includes(movie.id) ? "red" : null
+                      }
+                      icon={
+                        likedMovies.includes(movie.id)
+                          ? faSolidHeart
+                          : faRegularHeart
+                      }
+                      image={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                      overview={movie.overview}
+                    />
+                  </article>
+                )
+            )}
+          </section>
         </form>
       </div>
     </div>
