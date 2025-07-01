@@ -1,12 +1,47 @@
-# React + Vite
+🏠 Home Page Component (Home.jsx)
+This is the main UI for displaying movies fetched from an external API (like TMDB). It integrates several key React concepts:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✅ Features Implemented:
+Movie List Rendering:
 
-Currently, two official plugins are available:
+The component uses the useMovieContext() hook to retrieve movie data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Each movie is displayed using a MovieCards reusable component.
 
-## Expanding the ESLint configuration
+Search Filter:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+A search input allows users to filter movies in real-time based on the starting characters of the movie title (case-insensitive).
+movie.title.toLowerCase().startsWith(search.toLowerCase())
+Like/Unlike System:
+
+Each movie can be liked (toggled with a heart icon). This is managed using the likedMovies state array.
+
+Depending on whether the movie is liked, it displays a solid or regular heart icon using FontAwesome icons.
+
+This shows understanding of conditional rendering and state-driven UI.
+
+Ad Display on Load:
+
+An advertisement (<Adverts /> component) is shown for 10 seconds on page load.
+
+This is controlled using the showAd state and setTimeout within useEffect.
+
+📺 Adverts Component (Adverts.jsx)
+This component is a temporary video ad popup designed to promote a fictional clothing store.
+
+✅ Features Implemented:
+Countdown Timer:
+
+The ad includes a 10-second countdown, implemented with useEffect and setTimeout.
+
+The seconds state decreases every second until it hits zero.
+
+Video Display:
+
+An autoplaying, muted, looping video is embedded using a local file.
+
+Demonstrates ability to work with media elements in React.
+
+External Link Integration:
+
+The ad contains a promotional message and a clickable link (mock site: studylodge.org) styled using CSS Modules.
